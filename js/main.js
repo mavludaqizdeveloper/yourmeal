@@ -27,7 +27,7 @@ fetch('json/foodtype.json')
             <img src="${item.imgUrl}" class="menu__image">
             <p class="menu__text">${item.text}</p>
         `
-      
+      menuList.appendChild(listItem)
         })
     })
 let cardsGeneral = document.querySelector('.cards__general')
