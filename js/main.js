@@ -1,3 +1,4 @@
+ // header
 let headerGeneral = document.querySelector('.header__general')
 fetch('json/header.json')
 .then(res=>res.json())
@@ -16,39 +17,53 @@ fetch('json/header.json')
         headerGeneral.appendChild(box)
     })
 })
-let menuList = document.querySelector('.menu__list')
-fetch('json/foodtype.json')
-.then(res=>res.json())
-.then(data=>{
-    data.forEach(item=>{
-        let listItem = document.createElement('button')
-        listItem.className = 'menu__item'
-        listItem.innerHTML = `
-            <img src="${item.imgUrl}" class="menu__image">
-            <p class="menu__text">${item.text}</p>
-        `
-      menuList.appendChild(listItem)
-        })
-    })
-let cardsGeneral = document.querySelector('.cards__general')
-fetch('json/cards.json')
-.then(res=>res.json())
-.then(data=>{
+
+    // cards 
+    fetch('json/cards.json')
+    .then(res=>res.json())
+    .then(data=>{
+    let cardsGeneral = document.querySelector('.cards__general')
+    
     data.forEach(item=>{
         let box = document.createElement('div')
         box.className = 'cards__box box'
         box.innerHTML = `
-            <img src="${item.imgUrl}" class="cards__image">
-            <h3 class="cards__price">${item.price}₽</h3>
-            <p class="cards__name">${item.name}</p>
-            <span class="cards__span">${item.gramm}</span>
-            <i class="cards__type"><b>type: </b> ${item.type}</i>
-            <button class="cards__btn">Добавить</button>
+        <img src="${item.imgUrl}" class="cards__image">
+        <h3 class="cards__price">${item.price}₽</h3>
+        <p class="cards__name">${item.name}</p>
+        <span class="cards__span">${item.gramm}</span>
+        <i class="cards__type"><b>type: </b> ${item.type}</i>
+        <button class="cards__btn">Добавить</button>
         `
         cardsGeneral.appendChild(box)
     })
 })
+let filterBtns = document.querySelector('.menu__list')
 
-function filterFood(type){
-    let cards__box = document.querySelectorAll('.cards__box')
-}
+filterBtns.addEventListener("click", function(e){
+    if (e.target.tagName !== "BUTTON") return; 
+
+    let filterType = e.target.dataset.type;
+    let cardsGeneral = document.querySelector('.cards__general');
+    cardsGeneral.innerHTML = "";
+
+    fetch('json/cards.json')
+    .then(res => res.json())
+    .then(data => {
+        data.forEach(item => {
+            if (item.type === filterType || filterType === "all") {
+                let box = document.createElement('div');
+                box.className = 'cards__box box';
+                box.innerHTML = `
+                    <img src="${item.imgUrl}" class="cards__image">
+                    <h3 class="cards__price">${item.price}₽</h3>
+                    <p class="cards__name">${item.name}</p>
+                    <span class="cards__span">${item.gramm}</span>
+                    <i class="cards__type"><b>type: </b> ${item.type}</i>
+                    <button class="cards__btn">Добавить</button>
+                `;
+                cardsGeneral.appendChild(box);
+            }
+        });
+    });
+});

@@ -3,61 +3,79 @@
         "imgUrl": "img/photo.png",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г",
+        "type": "burger",
+        "total": 0
     
     },
     {
-        "imgUrl": "img/photo.png",
+        "imgUrl": "img/hotdog.png",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г",
+        "type": "hotdog",
+        "total": 0
     
     },
     {
-        "imgUrl": "img/photo.png",
+        "imgUrl": "img/zakuski.jpg",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г",
+        "type": "zakuski",
+        "total": 0
         
     },
     {
-        "imgUrl": "img/photo.png",
+        "imgUrl": "img/combo.avif",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г",
+        "type": "combo",
+        "total": 0
 
     },
     {
-        "imgUrl": "img/photo.png",
+        "imgUrl": "img/shaurma.jpg",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г",
+        "type": "shaurma",
+        "total": 0
         
     },
     {
-        "imgUrl": "img/photo.png",
+        "imgUrl": "img/pizza.jpg",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г",
+        "type": "pizza",
+        "total": 0
 
     },
     {
-        "imgUrl": "img/photo.png",
+        "imgUrl": "img/desert.jpg",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г", 
+        "type": "desert",
+        "total": 0
     },
     {
-        "imgUrl": "img/photo.png",
+        "imgUrl": "img/vok.jpg",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г",
+        "type": "vok",
+        "total": 0
     
     },
     {
-        "imgUrl": "img/photo.png",
+        "imgUrl": "img/sous.jpg",
         "price": 689,
         "name": "Мясная бомба",
-        "gramm": "520г"
+        "gramm": "520г",
+        "type": "sous",
+        "total": 0
     }
 ]
